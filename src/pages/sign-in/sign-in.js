@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import WeatherProFooter from "../../components/weather-pro-footer";
 import { EyeIcon, EyeOffIcon } from "lucide-react";
 import { ReactComponent as SunIcon } from "../../assets/vector-images/sun.svg";
-import { SignedIn, SignedOut, useSignIn } from "@clerk/clerk-react";
+import { SignedOut, useSignIn } from "@clerk/clerk-react";
 
 export default function SignInPage() {
   const [username, setUsername] = useState("");

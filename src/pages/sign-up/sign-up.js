@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router";
 import WeatherProFooter from "../../components/weather-pro-footer";
 import { EyeIcon, EyeOffIcon } from "lucide-react";
-import { SignedIn, SignedOut, useSignUp } from "@clerk/clerk-react";
+import { SignedOut, useSignUp } from "@clerk/clerk-react";
 
 export default function SignUpPage() {
   const [username, setUsername] = useState("");
