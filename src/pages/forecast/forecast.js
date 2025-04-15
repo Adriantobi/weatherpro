@@ -13,6 +13,7 @@ import { RedirectToSignIn, SignedIn, SignedOut } from "@clerk/clerk-react";
 import WeatherProFooter from "../../components/weather-pro-footer";
 import cloud from "../../assets/vector-images/cloud.png";
 import "./forecast.css";
+import { useNavigate } from "react-router";
 
 export default function ForeCastPage() {
   const [place, setPlace] = useState("London");
@@ -27,6 +28,7 @@ export default function ForeCastPage() {
   const deleteClothing = useMutation(api.clothes.deleteClothingItem);
   const wardrobeRef = useRef(null);
   const wardrobeButtonRef = useRef(null);
+  const navigate = useNavigate();
   const SunIcon = () => (
     <svg
       className="sunIcon"
@@ -575,9 +577,7 @@ export default function ForeCastPage() {
           <WeatherProFooter />
         </div>
       </SignedIn>
-      <SignedOut>
-        <RedirectToSignIn redirectUrl="/sign-in" />
-      </SignedOut>
+      <SignedOut>{navigate("/sign-in")}</SignedOut>
     </>
   );
 }

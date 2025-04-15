@@ -34,7 +34,6 @@ export default function SignUpPage() {
 
   return (
     <>
-      <SignedIn>{navigate("/forecast")}</SignedIn>
       <SignedOut>
         <div className="min-h-screen bg-[#fcfef2] flex flex-col">
           <div className="flex-grow flex flex-col items-center justify-center px-4">
@@ -123,6 +122,7 @@ export default function SignUpPage() {
           <WeatherProFooter />
         </div>
       </SignedOut>
+      <SignedIn>{navigate("/forecast")}</SignedIn>
     </>
   );
 }
