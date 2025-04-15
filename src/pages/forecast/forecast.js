@@ -13,7 +13,6 @@ import { RedirectToSignIn, SignedIn, SignedOut } from "@clerk/clerk-react";
 import WeatherProFooter from "../../components/weather-pro-footer";
 import cloud from "../../assets/vector-images/cloud.png";
 import "./forecast.css";
-import { redirect } from "next/navigation";
 
 export default function ForeCastPage() {
   const [place, setPlace] = useState("London");
@@ -577,7 +576,7 @@ export default function ForeCastPage() {
         </div>
       </SignedIn>
       <SignedOut>
-        <RedirectToSignIn />
+        <RedirectToSignIn redirectUrl="/sign-in" />
       </SignedOut>
     </>
   );
