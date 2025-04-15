@@ -9,11 +9,11 @@ import { useEffect, useRef, useState } from "react";
 import { api } from "../../convex/_generated/api";
 import { useMutation, useQuery } from "convex/react";
 import { HfInference } from "@huggingface/inference";
-import { RedirectToSignIn, SignedIn, SignedOut } from "@clerk/clerk-react";
+import { SignedIn, SignedOut } from "@clerk/clerk-react";
 import WeatherProFooter from "../../components/weather-pro-footer";
 import cloud from "../../assets/vector-images/cloud.png";
 import "./forecast.css";
-import { useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 
 export default function ForeCastPage() {
   const [place, setPlace] = useState("London");
@@ -28,6 +28,7 @@ export default function ForeCastPage() {
   const deleteClothing = useMutation(api.clothes.deleteClothingItem);
   const wardrobeRef = useRef(null);
   const wardrobeButtonRef = useRef(null);
+  const location = useLocation();
   const navigate = useNavigate();
   const SunIcon = () => (
     <svg
@@ -99,11 +100,6 @@ export default function ForeCastPage() {
     }
     return { low: null, high: null };
   };
-
-  function getDate() {
-    const today = new Date();
-    return today.toLocaleDateString("en-US", {});
-  }
 
   const handleUpload = async (file) => {
     if (!file) {
@@ -577,7 +573,11 @@ export default function ForeCastPage() {
           <WeatherProFooter />
         </div>
       </SignedIn>
-      <SignedOut>{navigate("/sign-in")}</SignedOut>
+      <SignedOut>
+        {location.pathname.toLowerCase().includes("sign")
+          ? null
+          : navigate("/sign-in")}
+      </SignedOut>
     </>
   );
 }

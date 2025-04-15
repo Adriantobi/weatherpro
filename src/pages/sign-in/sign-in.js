@@ -31,7 +31,6 @@ export default function SignInPage() {
 
   return (
     <>
-      <SignedIn>{navigate("/forecast")}</SignedIn>
       <SignedOut>
         <div className="min-h-screen bg-[#fcfef2] flex flex-col">
           <div className="flex-grow flex flex-col items-center justify-center px-4">

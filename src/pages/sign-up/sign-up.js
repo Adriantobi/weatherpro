@@ -122,7 +122,6 @@ export default function SignUpPage() {
           <WeatherProFooter />
         </div>
       </SignedOut>
-      <SignedIn>{navigate("/forecast")}</SignedIn>
     </>
   );
 }
