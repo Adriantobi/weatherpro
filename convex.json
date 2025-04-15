@@ -1,0 +1,8 @@
+{
+  "functions": "src/convex/",
+  "variables": {
+    "HUGGINGFACE_API_KEY": {
+      "value": "from env:HUGGINGFACE_API_KEY"
+    }
+  }
+}

@@ -1,0 +1,174 @@
+@font-face {
+  font-face-name: "Planet Kosmos";
+  src: local("Planet Kosmos");
+}
+
+@font-face {
+  font-face-name: "New Romantics";
+  src: local("New Romantics");
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.GeneratorWindow {
+  height: 100%;
+  width: 620px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  border: none;
+  background-color: #f1f4ea;
+  box-shadow: 4px 0 10px 5px #f1f4ea;
+}
+
+.Wardrobe {
+  background-color: #ffffff;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 610px;
+  height: 403px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.itemDiv {
+  display: flex;
+  flex-wrap: wrap;
+  background: none;
+  width: 610px;
+  height: 345px;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  overflow-y: auto;
+}
+
+.itemBox {
+  width: 100px;
+  height: 116px;
+  margin: 10px;
+  padding: 6px;
+  background-color: #f4f5e9;
+}
+
+.item {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.mainPage {
+  height: 100%;
+  width: 100%;
+  background-color: #fcfef1;
+}
+
+.weekView {
+  background: none;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  height: 80%;
+  width: auto;
+  position: absolute;
+  top: 15px;
+  left: 635px;
+}
+
+.temp {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Planet Kosmos", serif;
+  font-size: 3.75rem /* 60px */;
+  line-height: 1;
+  -webkit-text-stroke: 1px #ffffff;
+}
+
+.locationBar {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+}
+
+.currentDetails {
+  background-color: #f4f5e9;
+  box-shadow: 0 0 6px 5px #f4f5e9;
+  border-radius: 5px;
+  position: absolute;
+  width: 334px;
+  height: 100px;
+  bottom: 20px;
+  left: 650px;
+}
+
+.curDate {
+  font-family: "New Romantics", serif;
+  font-size: 30px;
+  line-height: 1;
+  position: absolute;
+  bottom: 30px;
+  left: 15px;
+}
+
+.location {
+  position: absolute;
+  font-family: "New Romantics", serif;
+  font-size: 25px;
+  line-height: 1;
+  bottom: 3px;
+  left: 14px;
+}
+
+.day {
+  position: absolute;
+  font-family: "MELAGLLIK", serif;
+  font-size: 40px;
+  line-height: 1;
+  bottom: 70px;
+  left: 15px;
+}
+
+.sunIcon {
+  height: 590px;
+  width: 600px;
+  fill: rgb(216, 116, 73);
+}
+
+.genItemBox {
+  display: flex;
+  width: 180px;
+  height: 200px;
+  margin: 10px;
+  padding: 6px;
+  background: none;
+  align-items: center;
+  flex-direction: column;
+}
+/* font-magazineLetter text-4xl flex flex-col justify-center items-center gap-4 */
+.genBTN {
+  width: 250px;
+  height: 115px;
+  font-family: "Magazine Letter By Brntlbrnl", serif;
+  font-size: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+}
+
